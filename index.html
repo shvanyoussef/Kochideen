@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Kochideen</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f5f2ec;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin-bottom: 12px;
+            padding: 18px;
+            border-radius: 15px;
+            font-size: 18px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .random-button {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 15px;
+            background: #718b58;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🍽️ Unsere Kochideen</h1>
+
+    <div class="subtitle">
+        Was wollen wir heute kochen?
+    </div>
+
+    <button class="random-button" onclick="zufall()">
+        🎲 Was sollen wir heute kochen?
+    </button>
+
+    <ul>
+        <li>🍛 Hähnchencurry mit Reis</li>
+        <li>🫘 Mujadara</li>
+        <li>🌶️ Chili con Carne</li>
+        <li>🍆 Hackfleisch mit Auberginen</li>
+        <li>🍆 Auberginen-Gericht</li>
+        <li>🐟 Kartoffel-Spinat-Fisch</li>
+        <li>🥣 Linseneintopf</li>
+        <li>🥨 Spätzle mit Linsen</li>
+        <li>🥗 Bowl</li>
+        <li>🥕 Ofengemüse</li>
+        <li>🍲 Suppe</li>
+    </ul>
+
+</div>
+
+<script>
+function zufall() {
+
+    const gerichte = [
+        "Hähnchencurry mit Reis",
+        "Mujadara",
+        "Chili con Carne",
+        "Hackfleisch mit Auberginen",
+        "Auberginen-Gericht",
+        "Kartoffel-Spinat-Fisch",
+        "Linseneintopf",
+        "Spätzle mit Linsen",
+        "Bowl",
+        "Ofengemüse",
+        "Suppe"
+    ];
+
+    const zufallsgericht =
+        gerichte[Math.floor(Math.random() * gerichte.length)];
+
+    alert("Heute gibt es: 🍽️ " + zufallsgericht);
+}
+</script>
+
+</body>
+</html>
